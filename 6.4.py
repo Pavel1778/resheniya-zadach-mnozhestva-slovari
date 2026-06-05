@@ -7,16 +7,16 @@ replace = {
     'ы': 'y', 'э': 'e', 'ю': 'iu', 'я': 'ia'
 }
 text = input("Введите русский текст: ")
-result = []
+res = []
 for ch in text:
     low = ch.lower()
     if low in replace:
         repl = replace[low]
         if ch.isupper():
             repl = repl[0].upper() + repl[1:]
-        result.append(repl)
+        res.append(repl)
     elif low in ('ъ', 'ь'):
         continue
     else:
-        result.append(ch)
-print("Транслитерация:", ''.join(result))
+        res.append(ch)
+print("Транслитерация:", ''.join(res))

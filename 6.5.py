@@ -2,8 +2,8 @@
 n = int(input("Количество сотрудников: "))
 counts = {}
 for i in range(n):
-    surname = input(f"Фамилия {i+1}: ")
-    counts[surname] = counts.get(surname, 0) + 1
+    s = input(f"Фамилия {i+1}: ")
+    counts[s] = counts.get(s, 0) + 1
 total = 0
 for c in counts.values():
     if c > 1:

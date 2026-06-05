@@ -8,7 +8,7 @@ oatmeal = set()
 for i in range(m):
     oatmeal.add(input(f"Фамилия {i+1}: "))
 both = manna & oatmeal
-if len(both) == 0:
-    print("Таких нет")
-else:
+if both:
     print("Количество детей, любящих обе каши:", len(both))
+else:
+    print("Таких нет")
